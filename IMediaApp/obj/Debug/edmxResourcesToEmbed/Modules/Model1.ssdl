@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище ImediaModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Address">
+    <Key>
+      <PropertyRef Name="AddressID" />
+    </Key>
+    <Property Name="AddressID" Type="int" Nullable="false" />
+    <Property Name="Street" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="House" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="RegionID" Type="int" Nullable="false" />
+    <Property Name="FlyersTypeID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AdvestingReport">
+    <Key>
+      <PropertyRef Name="AdvRepID" />
+    </Key>
+    <Property Name="AdvRepID" Type="int" Nullable="false" />
+    <Property Name="WorkerID" Type="int" Nullable="false" />
+    <Property Name="AddressID" Type="int" Nullable="false" />
+    <Property Name="Photo" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BuyAdv">
+    <Key>
+      <PropertyRef Name="BuyID" />
+    </Key>
+    <Property Name="BuyID" Type="int" Nullable="false" />
+    <Property Name="ClientID" Type="int" Nullable="false" />
+    <Property Name="Price" Type="int" Nullable="false" />
+    <Property Name="DateConclusion" Type="date" Nullable="false" />
+    <Property Name="DateCompletion" Type="date" Nullable="false" />
+    <Property Name="ServiceID" Type="int" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Client">
+    <Key>
+      <PropertyRef Name="ClientID" />
+    </Key>
+    <Property Name="ClientID" Type="int" Nullable="false" />
+    <Property Name="Surname" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Patronymic" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CompanyName" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FlyersType">
+    <Key>
+      <PropertyRef Name="TypeID" />
+    </Key>
+    <Property Name="TypeID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Partner">
+    <Key>
+      <PropertyRef Name="PartnerID" />
+    </Key>
+    <Property Name="PartnerID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Photo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PersonalData">
+    <Key>
+      <PropertyRef Name="WorkerID" />
+    </Key>
+    <Property Name="WorkerID" Type="int" Nullable="false" />
+    <Property Name="NumberPass" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="SeriesPass" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="City" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Street" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="House" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Post">
+    <Key>
+      <PropertyRef Name="PostID" />
+    </Key>
+    <Property Name="PostID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Region">
+    <Key>
+      <PropertyRef Name="RegionID" />
+    </Key>
+    <Property Name="RegionID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Report">
+    <Key>
+      <PropertyRef Name="ReportID" />
+    </Key>
+    <Property Name="ReportID" Type="int" Nullable="false" />
+    <Property Name="WorkerID" Type="int" Nullable="false" />
+    <Property Name="AdvRepID" Type="int" Nullable="false" />
+    <Property Name="ServiceID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Service">
+    <Key>
+      <PropertyRef Name="ServiceID" />
+    </Key>
+    <Property Name="ServiceID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Worker">
+    <Key>
+      <PropertyRef Name="WorkerID" />
+    </Key>
+    <Property Name="WorkerID" Type="int" Nullable="false" />
+    <Property Name="Surname" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Patronymic" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Post" Type="int" Nullable="false" />
+    <Property Name="Login" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="RoleID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Worksheet">
+    <Key>
+      <PropertyRef Name="WorkSheetID" />
+    </Key>
+    <Property Name="WorkSheetID" Type="int" Nullable="false" />
+    <Property Name="WorkerID" Type="int" Nullable="false" />
+    <Property Name="Flyers" Type="int" Nullable="false" />
+    <Property Name="Schedule" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Address_FlyersType">
+    <End Role="FlyersType" Type="Self.FlyersType" Multiplicity="1" />
+    <End Role="Address" Type="Self.Address" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FlyersType">
+        <PropertyRef Name="TypeID" />
+      </Principal>
+      <Dependent Role="Address">
+        <PropertyRef Name="FlyersTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Address_Region">
+    <End Role="Region" Type="Self.Region" Multiplicity="1" />
+    <End Role="Address" Type="Self.Address" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Region">
+        <PropertyRef Name="RegionID" />
+      </Principal>
+      <Dependent Role="Address">
+        <PropertyRef Name="RegionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AdvestingReport_Address">
+    <End Role="Address" Type="Self.Address" Multiplicity="1" />
+    <End Role="AdvestingReport" Type="Self.AdvestingReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Address">
+        <PropertyRef Name="AddressID" />
+      </Principal>
+      <Dependent Role="AdvestingReport">
+        <PropertyRef Name="AddressID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AdvestingReport_Worker">
+    <End Role="Worker" Type="Self.Worker" Multiplicity="1" />
+    <End Role="AdvestingReport" Type="Self.AdvestingReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Worker">
+        <PropertyRef Name="WorkerID" />
+      </Principal>
+      <Dependent Role="AdvestingReport">
+        <PropertyRef Name="WorkerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BuyAdv_Client">
+    <End Role="Client" Type="Self.Client" Multiplicity="1" />
+    <End Role="BuyAdv" Type="Self.BuyAdv" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Client">
+        <PropertyRef Name="ClientID" />
+      </Principal>
+      <Dependent Role="BuyAdv">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BuyAdv_Service">
+    <End Role="Service" Type="Self.Service" Multiplicity="1" />
+    <End Role="BuyAdv" Type="Self.BuyAdv" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Service">
+        <PropertyRef Name="ServiceID" />
+      </Principal>
+      <Dependent Role="BuyAdv">
+        <PropertyRef Name="ServiceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PersonalData_Worker">
+    <End Role="Worker" Type="Self.Worker" Multiplicity="1" />
+    <End Role="PersonalData" Type="Self.PersonalData" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Worker">
+        <PropertyRef Name="WorkerID" />
+      </Principal>
+      <Dependent Role="PersonalData">
+        <PropertyRef Name="WorkerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Report_AdvestingReport">
+    <End Role="AdvestingReport" Type="Self.AdvestingReport" Multiplicity="1" />
+    <End Role="Report" Type="Self.Report" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AdvestingReport">
+        <PropertyRef Name="AdvRepID" />
+      </Principal>
+      <Dependent Role="Report">
+        <PropertyRef Name="AdvRepID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Report_Service">
+    <End Role="Service" Type="Self.Service" Multiplicity="1" />
+    <End Role="Report" Type="Self.Report" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Service">
+        <PropertyRef Name="ServiceID" />
+      </Principal>
+      <Dependent Role="Report">
+        <PropertyRef Name="ServiceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Report_Worker">
+    <End Role="Worker" Type="Self.Worker" Multiplicity="1" />
+    <End Role="Report" Type="Self.Report" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Worker">
+        <PropertyRef Name="WorkerID" />
+      </Principal>
+      <Dependent Role="Report">
+        <PropertyRef Name="WorkerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Worker_Post">
+    <End Role="Post" Type="Self.Post" Multiplicity="1" />
+    <End Role="Worker" Type="Self.Worker" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Post">
+        <PropertyRef Name="PostID" />
+      </Principal>
+      <Dependent Role="Worker">
+        <PropertyRef Name="Post" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Worker_Role">
+    <End Role="Role" Type="Self.Role" Multiplicity="1" />
+    <End Role="Worker" Type="Self.Worker" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="RoleID" />
+      </Principal>
+      <Dependent Role="Worker">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Worksheet_PersonalData">
+    <End Role="PersonalData" Type="Self.PersonalData" Multiplicity="1" />
+    <End Role="Worksheet" Type="Self.Worksheet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PersonalData">
+        <PropertyRef Name="WorkerID" />
+      </Principal>
+      <Dependent Role="Worksheet">
+        <PropertyRef Name="WorkerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище ImediaModelContainer">
+    <EntitySet Name="Address" EntityType="Self.Address" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AdvestingReport" EntityType="Self.AdvestingReport" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BuyAdv" EntityType="Self.BuyAdv" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Client" EntityType="Self.Client" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FlyersType" EntityType="Self.FlyersType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Partner" EntityType="Self.Partner" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PersonalData" EntityType="Self.PersonalData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Post" EntityType="Self.Post" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Region" EntityType="Self.Region" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Report" EntityType="Self.Report" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Service" EntityType="Self.Service" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Worker" EntityType="Self.Worker" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Worksheet" EntityType="Self.Worksheet" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Address_FlyersType" Association="Self.FK_Address_FlyersType">
+      <End Role="FlyersType" EntitySet="FlyersType" />
+      <End Role="Address" EntitySet="Address" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Address_Region" Association="Self.FK_Address_Region">
+      <End Role="Region" EntitySet="Region" />
+      <End Role="Address" EntitySet="Address" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AdvestingReport_Address" Association="Self.FK_AdvestingReport_Address">
+      <End Role="Address" EntitySet="Address" />
+      <End Role="AdvestingReport" EntitySet="AdvestingReport" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AdvestingReport_Worker" Association="Self.FK_AdvestingReport_Worker">
+      <End Role="Worker" EntitySet="Worker" />
+      <End Role="AdvestingReport" EntitySet="AdvestingReport" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BuyAdv_Client" Association="Self.FK_BuyAdv_Client">
+      <End Role="Client" EntitySet="Client" />
+      <End Role="BuyAdv" EntitySet="BuyAdv" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BuyAdv_Service" Association="Self.FK_BuyAdv_Service">
+      <End Role="Service" EntitySet="Service" />
+      <End Role="BuyAdv" EntitySet="BuyAdv" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PersonalData_Worker" Association="Self.FK_PersonalData_Worker">
+      <End Role="Worker" EntitySet="Worker" />
+      <End Role="PersonalData" EntitySet="PersonalData" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Report_AdvestingReport" Association="Self.FK_Report_AdvestingReport">
+      <End Role="AdvestingReport" EntitySet="AdvestingReport" />
+      <End Role="Report" EntitySet="Report" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Report_Service" Association="Self.FK_Report_Service">
+      <End Role="Service" EntitySet="Service" />
+      <End Role="Report" EntitySet="Report" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Report_Worker" Association="Self.FK_Report_Worker">
+      <End Role="Worker" EntitySet="Worker" />
+      <End Role="Report" EntitySet="Report" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Worker_Post" Association="Self.FK_Worker_Post">
+      <End Role="Post" EntitySet="Post" />
+      <End Role="Worker" EntitySet="Worker" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Worker_Role" Association="Self.FK_Worker_Role">
+      <End Role="Role" EntitySet="Role" />
+      <End Role="Worker" EntitySet="Worker" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Worksheet_PersonalData" Association="Self.FK_Worksheet_PersonalData">
+      <End Role="PersonalData" EntitySet="PersonalData" />
+      <End Role="Worksheet" EntitySet="Worksheet" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

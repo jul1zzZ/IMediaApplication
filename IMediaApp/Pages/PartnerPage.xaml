@@ -1,0 +1,75 @@
+﻿<Page x:Class="IMediaApp.Pages.PartnerPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:local="clr-namespace:IMediaApp.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PartnerPage" Background="White">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="150" />
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="350"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" VerticalAlignment="Bottom" Margin="16" FontFamily="Century Gothic" Foreground="#3F578C" Text="Партнеры" FontSize="18" HorizontalAlignment="Left"/>
+        <Line Width="780" Height="1" Stroke="Black" StrokeThickness="4" VerticalAlignment="Bottom" X1="0" X2="5000" Grid.ColumnSpan="4" Margin="0 0 0 5"/>
+        <Image Source="\Resources\qew.png" Grid.Column="0" Grid.Row="1" Width="450" Height="125" Stretch="Fill" Opacity="0.6"/>
+        <Border Grid.Row="1" Grid.Column="0" Width="450" Height="125">
+            <StackPanel Orientation="Vertical" Margin="180 0 0 0">
+                <TextBlock Text="Акция «Возвращаем % за покупки по карте»"  FontFamily="Centruy Gothic"
+                           FontWeight="Bold" Foreground="#3F578C" Margin="8 16 0 0" FontSize="10" FontStyle="Italic" />
+                <TextBlock FontFamily="Century Gothic" FontWeight="ExtraLight" FontStyle="Italic" Foreground="DimGray" Margin="8 12 0 0" FontSize="8">
+                    Оформляйте новую карту Cashback — MasterCard<LineBreak/> — Альфа-Банк иполучайте % от суммы покупок<LineBreak/> обратно на счет.
+                </TextBlock>
+            </StackPanel>
+        </Border>
+            <Image Source="\Resources\alfa.png" Grid.Row="1" Grid.Column="0" Width="100" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="80 0"/>
+
+        <Border Grid.Row="1" Grid.Column="1" Background="#3f578c" Height="125" Width="350">
+            <StackPanel Orientation="Vertical" Margin="30 0 200 0">
+                <Image Source="\Resources\3125.png" Width="60" Margin="0 16 0 0"/>
+                <TextBlock Text="менеджер проекта" FontFamily="Century Gothic" FontSize="8" TextAlignment="Center" Foreground="Gray" FontStyle="Italic" Margin="0 4 0 0"/>
+                <TextBlock Text="Елена" FontFamily="Century Gothic" TextAlignment="Center" Foreground="LightGray" FontWeight="Heavy" FontStyle="Italic" Margin="0 4 0 0"/>
+            </StackPanel>
+        </Border>
+        <StackPanel Orientation="Vertical" Margin="150 24 16 24" Grid.Row="1" Grid.Column="1">
+            <TextBlock Text="СТАНЬТЕ УСПЕШНЕЕ!" FontFamily="Century Gothic" TextAlignment="Center" FontWeight="Bold" Foreground="White" FontStyle="Italic" FontSize="10"/>
+            <TextBlock Text="Привлекайте новых клиентов с нами" FontFamily="Century Gothic" TextAlignment="Center" FontWeight="Bold" Foreground="White" FontStyle="Italic" FontSize="9" Margin="0 4 0 0"/>
+            <TextBox x:Name="NumberTb" Margin="8 8 8 0" Height="20" FontSize="11" Foreground="White"/>
+            <Button x:Name="EntBtn" Content="Хочу новых клиентов" FontFamily="Century Gothic" Foreground="White" Background="#4d6291" BorderBrush="White" Margin="8 8 8 0" FontSize="9" FontWeight="Bold" FontStyle="Italic" Height="20"/>
+        </StackPanel>
+
+        <ListView x:Name="PartnerLV" Grid.Row="2" Grid.ColumnSpan="2" ScrollViewer.HorizontalScrollBarVisibility="Disabled" BorderBrush="Transparent">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="Focusable" Value="False"/>
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center" />
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid >
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Image Source="{Binding GetPhoto}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="16 0" Width="100" Height="100" Grid.Row="0"/>
+                        <TextBlock Text="{Binding Description}" Grid.Row="1" TextAlignment="Left" Width="150" TextWrapping="Wrap"/>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>

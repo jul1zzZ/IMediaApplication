@@ -11,9 +11,17 @@ namespace IMediaApp.Modules
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.IO;
     public partial class Partner
     {
+        public string GetPhoto
+        {
+            get
+            {
+                return $@"{Directory.GetCurrentDirectory()}\Images\{Photo}";
+            }
+        }
+
         public int PartnerID { get; set; }
         public string Name { get; set; }
         public string Photo { get; set; }

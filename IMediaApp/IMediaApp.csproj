@@ -171,6 +171,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\AdvestionAddPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AdvestionReportPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\ContactPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -190,6 +198,12 @@
     </Compile>
     <Compile Include="Pages\AddressPage.xaml.cs">
       <DependentUpon>AddressPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AdvestionAddPage.xaml.cs">
+      <DependentUpon>AdvestionAddPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AdvestionReportPage.xaml.cs">
+      <DependentUpon>AdvestionReportPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\ContactPage.xaml.cs">
       <DependentUpon>ContactPage.xaml</DependentUpon>

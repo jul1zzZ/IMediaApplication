@@ -99,7 +99,7 @@ namespace IMediaApp
 
         private void AdvRepBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            MainFrame.Navigate(new Pages.AdvestionReportPage());
         }
 
         private void BuyAdvBtn_Click(object sender, RoutedEventArgs e)

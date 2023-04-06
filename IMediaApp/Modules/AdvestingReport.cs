@@ -11,6 +11,7 @@ namespace IMediaApp.Modules
 {
     using System;
     using System.Collections.Generic;
+    using System.IO;
     
     public partial class AdvestingReport
     {
@@ -19,7 +20,15 @@ namespace IMediaApp.Modules
         {
             this.Reports = new HashSet<Report>();
         }
-    
+
+        public string GetPhoto
+        {
+            get
+            {
+                return $@"{Directory.GetCurrentDirectory()}\Reports\{Photo}";
+            }
+        }
+
         public int AdvRepID { get; set; }
         public int WorkerID { get; set; }
         public int AddressID { get; set; }

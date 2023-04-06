@@ -4,12 +4,12 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Хранилище ImediaModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Хранилище ImediaModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Address">
           <Key>
             <PropertyRef Name="AddressID" />
           </Key>
-          <Property Name="AddressID" Type="int" Nullable="false" />
+          <Property Name="AddressID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Street" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="House" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="RegionID" Type="int" Nullable="false" />
@@ -19,7 +19,7 @@
           <Key>
             <PropertyRef Name="AdvRepID" />
           </Key>
-          <Property Name="AdvRepID" Type="int" Nullable="false" />
+          <Property Name="AdvRepID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="WorkerID" Type="int" Nullable="false" />
           <Property Name="AddressID" Type="int" Nullable="false" />
           <Property Name="Photo" Type="nvarchar" MaxLength="50" Nullable="false" />
@@ -28,7 +28,7 @@
           <Key>
             <PropertyRef Name="BuyID" />
           </Key>
-          <Property Name="BuyID" Type="int" Nullable="false" />
+          <Property Name="BuyID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ClientID" Type="int" Nullable="false" />
           <Property Name="Price" Type="int" Nullable="false" />
           <Property Name="DateConclusion" Type="date" Nullable="false" />
@@ -40,7 +40,7 @@
           <Key>
             <PropertyRef Name="ClientID" />
           </Key>
-          <Property Name="ClientID" Type="int" Nullable="false" />
+          <Property Name="ClientID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Surname" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Patronymic" Type="nvarchar" MaxLength="50" Nullable="false" />
@@ -57,7 +57,7 @@
           <Key>
             <PropertyRef Name="PartnerID" />
           </Key>
-          <Property Name="PartnerID" Type="int" Nullable="false" />
+          <Property Name="PartnerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Photo" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
@@ -66,7 +66,7 @@
           <Key>
             <PropertyRef Name="WorkerID" />
           </Key>
-          <Property Name="WorkerID" Type="int" Nullable="false" />
+          <Property Name="WorkerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="NumberPass" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="SeriesPass" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="City" Type="nvarchar" MaxLength="50" Nullable="false" />
@@ -91,7 +91,7 @@
           <Key>
             <PropertyRef Name="ReportID" />
           </Key>
-          <Property Name="ReportID" Type="int" Nullable="false" />
+          <Property Name="ReportID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="WorkerID" Type="int" Nullable="false" />
           <Property Name="AdvRepID" Type="int" Nullable="false" />
           <Property Name="ServiceID" Type="int" Nullable="false" />
@@ -124,7 +124,7 @@
           <Key>
             <PropertyRef Name="WorkerID" />
           </Key>
-          <Property Name="WorkerID" Type="int" Nullable="false" />
+          <Property Name="WorkerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Surname" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Patronymic" Type="nvarchar" MaxLength="50" Nullable="false" />
@@ -137,7 +137,7 @@
           <Key>
             <PropertyRef Name="WorkSheetID" />
           </Key>
-          <Property Name="WorkSheetID" Type="int" Nullable="false" />
+          <Property Name="WorkSheetID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="WorkerID" Type="int" Nullable="false" />
           <Property Name="Flyers" Type="int" Nullable="false" />
           <Property Name="Schedule" Type="nvarchar" MaxLength="50" Nullable="false" />
@@ -367,8 +367,7 @@
             <End Role="Worksheet" EntitySet="Worksheet" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ImediaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">

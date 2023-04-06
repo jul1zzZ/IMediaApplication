@@ -25,15 +25,8 @@ namespace IMediaApp.Modules
             throw new UnintentionalCodeFirstException();
         }
 
-        private static ImediaEntities _context;
-        public static ImediaEntities GetContext()
-        {
-            if (_context == null)
-            {
-                _context = new ImediaEntities();
-            }
-            return _context;
-        }
+        private static ImediaEntities _cxt;
+        public static ImediaEntities GetContext() { if (_cxt == null) _cxt = new ImediaEntities(); return _cxt; }
     
         public virtual DbSet<Address> Addresses { get; set; }
         public virtual DbSet<AdvestingReport> AdvestingReports { get; set; }

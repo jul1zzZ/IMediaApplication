@@ -55,7 +55,6 @@
                 </TextBlock>
             </Button>
             <Button x:Name="ClientBtn" Content="Клиенты" VerticalAlignment="Center" FontSize="11" Foreground="#3F578C" FontStyle="Italic" Click="ClientBtn_Click" FontFamily="Century Gothic" Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Center" Width="100" Height="20" Margin="0 16 0 0"/>
-            <Button x:Name="PartnersBtn" Content="Партнёры" VerticalAlignment="Center" FontSize="11" Foreground="#3F578C" FontStyle="Italic" Click="PartnersBtn_Click" FontFamily="Century Gothic" Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Center" Width="100" Height="20" Margin="0 16 0 0"/>
             <Button x:Name="ReportBtn" Content="Отчеты" VerticalAlignment="Center" FontSize="11" Foreground="#3F578C" FontStyle="Italic" Click="ReportBtn_Click" FontFamily="Century Gothic" Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Center" Width="100" Height="20" Margin="0 16 0 0"/>
             <Button x:Name="WorkerBtn" Content="Работники" VerticalAlignment="Center" FontSize="11" Foreground="#3F578C" FontStyle="Italic" Click="WorkerBtn_Click" FontFamily="Century Gothic" Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Center" Width="100" Height="20" Margin="0 16 0 0"/>
         </StackPanel>

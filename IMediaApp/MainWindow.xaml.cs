@@ -38,13 +38,11 @@ namespace IMediaApp
             {
                 BuyAdvBtn.Visibility = Visibility.Visible;
                 ClientBtn.Visibility = Visibility.Visible;
-                PartnerBtn.Visibility = Visibility.Visible;
                 ReportBtn.Visibility = Visibility.Visible;
                 WorkerBtn.Visibility = Visibility.Visible;
             }
             else
             {
-                PartnerBtn.Visibility = Visibility.Hidden;
                 BuyAdvBtn.Visibility = Visibility.Hidden;
                 ClientBtn.Visibility = Visibility.Hidden;
                 ReportBtn.Visibility = Visibility.Hidden;
@@ -96,7 +94,7 @@ namespace IMediaApp
 
         private void AddressBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            MainFrame.Navigate(new Pages.AddressPage());
         }
 
         private void AdvRepBtn_Click(object sender, RoutedEventArgs e)

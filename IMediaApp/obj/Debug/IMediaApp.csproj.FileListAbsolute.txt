@@ -41,3 +41,7 @@ C:\Users\jusep\OneDrive\Рабочий стол\IMediaApp\IMediaApp\bin\Debug\ru
 C:\Users\jusep\OneDrive\Рабочий стол\IMediaApp\IMediaApp\obj\Debug\LoginWindow.g.cs
 C:\Users\jusep\OneDrive\Рабочий стол\IMediaApp\IMediaApp\obj\Debug\App.baml
 C:\Users\jusep\OneDrive\Рабочий стол\IMediaApp\IMediaApp\obj\Debug\LoginWindow.baml
+C:\Users\jusep\OneDrive\Рабочий стол\IMediaApp\IMediaApp\obj\Debug\Pages\AddressPage.g.cs
+C:\Users\jusep\OneDrive\Рабочий стол\IMediaApp\IMediaApp\obj\Debug\Pages\AddressPage.baml
+C:\Users\jusep\OneDrive\Рабочий стол\IMediaApp\IMediaApp\obj\Debug\Pages\AddAddressPage.g.cs
+C:\Users\jusep\OneDrive\Рабочий стол\IMediaApp\IMediaApp\obj\Debug\Pages\AddAddressPage.baml

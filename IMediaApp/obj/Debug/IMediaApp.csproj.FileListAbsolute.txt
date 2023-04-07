@@ -49,3 +49,7 @@ C:\Users\jusep\OneDrive\Рабочий стол\IMediaApp\IMediaApp\obj\Debug\Pa
 C:\Users\jusep\OneDrive\Рабочий стол\IMediaApp\IMediaApp\obj\Debug\Pages\AdvestionReportPage.baml
 C:\Users\jusep\OneDrive\Рабочий стол\IMediaApp\IMediaApp\obj\Debug\Pages\AdvestionAddPage.g.cs
 C:\Users\jusep\OneDrive\Рабочий стол\IMediaApp\IMediaApp\obj\Debug\Pages\AdvestionAddPage.baml
+C:\Users\jusep\OneDrive\Рабочий стол\IMediaApp\IMediaApp\obj\Debug\Pages\BuyAdvAddPage.g.cs
+C:\Users\jusep\OneDrive\Рабочий стол\IMediaApp\IMediaApp\obj\Debug\Pages\BuyAdvPage.g.cs
+C:\Users\jusep\OneDrive\Рабочий стол\IMediaApp\IMediaApp\obj\Debug\Pages\BuyAdvAddPage.baml
+C:\Users\jusep\OneDrive\Рабочий стол\IMediaApp\IMediaApp\obj\Debug\Pages\BuyAdvPage.baml

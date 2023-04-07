@@ -179,6 +179,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\BuyAdvAddPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\BuyAdvPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\ContactPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -204,6 +212,12 @@
     </Compile>
     <Compile Include="Pages\AdvestionReportPage.xaml.cs">
       <DependentUpon>AdvestionReportPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\BuyAdvAddPage.xaml.cs">
+      <DependentUpon>BuyAdvAddPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\BuyAdvPage.xaml.cs">
+      <DependentUpon>BuyAdvPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\ContactPage.xaml.cs">
       <DependentUpon>ContactPage.xaml</DependentUpon>

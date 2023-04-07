@@ -104,7 +104,7 @@ namespace IMediaApp
 
         private void BuyAdvBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            MainFrame.Navigate(new Pages.BuyAdvPage());
         }
 
         private void ClientBtn_Click(object sender, RoutedEventArgs e)

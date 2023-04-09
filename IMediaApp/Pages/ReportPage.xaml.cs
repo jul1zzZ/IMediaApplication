@@ -17,34 +17,34 @@ using System.Windows.Shapes;
 namespace IMediaApp.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для ClientPage.xaml
+    /// Логика взаимодействия для ReportPage.xaml
     /// </summary>
-    public partial class ClientPage : Page
+    public partial class ReportPage : Page
     {
-        public List<Client> Clients { get; set; }
-        public ClientPage()
+        public List<Report> Reports { get; set; }
+        public ReportPage()
         {
             InitializeComponent();
-            DataClient.ItemsSource = null;
-            Clients = ImediaEntities.GetContext().Clients.ToList();
+            DataReport.ItemsSource = null;
+            Reports = ImediaEntities.GetContext().Reports.ToList();
             DataContext = this;
-            DataClient.ItemsSource = Clients;
+            DataReport.ItemsSource = Reports;
         }
 
         private void EditBtn_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Pages.ClientAddPage((Client)(sender as Button).DataContext));
+            NavigationService.Navigate(new Pages.ReportAddPage((Report)(sender as Button).DataContext));
         }
 
         private void AddBtn_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Pages.ClientAddPage(null));
+            NavigationService.Navigate(new Pages.ReportAddPage(null));
         }
 
         private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
-            List<Client> clients = ImediaEntities.GetContext().Clients.ToList();
-            DataClient.ItemsSource = clients;
+            List<Report> reports = ImediaEntities.GetContext().Reports.ToList();
+            DataReport.ItemsSource = reports;
         }
     }
 }

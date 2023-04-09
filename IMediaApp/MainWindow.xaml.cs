@@ -132,7 +132,7 @@ namespace IMediaApp
 
         private void ReportBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            MainFrame.Navigate(new Pages.ReportPage());
         }
 
         private void WorkerBtn_Click(object sender, RoutedEventArgs e)

@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:IMediaApp.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="ClientPage">
+      Title="ClientPage" Background="White" IsVisibleChanged="Page_IsVisibleChanged">
 
     <Grid>
         <Grid.RowDefinitions>

@@ -57,3 +57,7 @@ C:\Users\jusep\OneDrive\Рабочий стол\IMediaApp\IMediaApp\obj\Debug\Pa
 C:\Users\jusep\OneDrive\Рабочий стол\IMediaApp\IMediaApp\obj\Debug\Pages\ClientPage.g.cs
 C:\Users\jusep\OneDrive\Рабочий стол\IMediaApp\IMediaApp\obj\Debug\Pages\ClientAddPage.baml
 C:\Users\jusep\OneDrive\Рабочий стол\IMediaApp\IMediaApp\obj\Debug\Pages\ClientPage.baml
+C:\Users\jusep\OneDrive\Рабочий стол\IMediaApp\IMediaApp\obj\Debug\Pages\ReportAddPage.g.cs
+C:\Users\jusep\OneDrive\Рабочий стол\IMediaApp\IMediaApp\obj\Debug\Pages\ReportPage.g.cs
+C:\Users\jusep\OneDrive\Рабочий стол\IMediaApp\IMediaApp\obj\Debug\Pages\ReportAddPage.baml
+C:\Users\jusep\OneDrive\Рабочий стол\IMediaApp\IMediaApp\obj\Debug\Pages\ReportPage.baml

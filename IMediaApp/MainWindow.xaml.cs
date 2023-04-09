@@ -48,6 +48,14 @@ namespace IMediaApp
                 ReportBtn.Visibility = Visibility.Hidden;
                 WorkerBtn.Visibility = Visibility.Hidden;
             }
+            if (LoginData.isAuth == true)
+            {
+                LoginBtn.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                LoginBtn.Visibility = Visibility.Visible;
+            }
         }
 
         private void AboutUsBtn_Click(object sender, RoutedEventArgs e)
@@ -109,7 +117,7 @@ namespace IMediaApp
 
         private void ClientBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            MainFrame.Navigate(new Pages.ClientPage());
         }
 
         private void PartnerBtn_Click_1(object sender, RoutedEventArgs e)

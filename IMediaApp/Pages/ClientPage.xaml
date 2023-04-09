@@ -1,0 +1,35 @@
+﻿<Page x:Class="IMediaApp.Pages.ClientPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:IMediaApp.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ClientPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <DataGrid x:Name="DataClient" HorizontalAlignment="Center" ItemsSource="{Binding Client}" Grid.Row="1"  AutoGenerateColumns="False" Style="{StaticResource MaterialDesignDataGrid}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Фамилия" Binding="{Binding Surname}"/>
+                <DataGridTextColumn Header="Имя" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="Отчество" Binding="{Binding Patronymic}"/>
+                <DataGridTextColumn Header="Наименование компании" Binding="{Binding CompanyName}"/>
+                <DataGridTemplateColumn Header="Редактировать">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="EditBtn" Content="Edit" FontFamily="Century Gothic" FontWeight="Heavy" FontStyle="Italic" Click="EditBtn_Click" Foreground="#3F578C" Background="Transparent" BorderBrush="Transparent"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="AddBtn" Content="Добавить" FontFamily="Century Gothic" FontWeight="Heavy" FontStyle="Italic" Click="AddBtn_Click" Foreground="#3F578C" Background="Transparent" BorderBrush="Transparent" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="16 0"/>
+
+    </Grid>
+</Page>

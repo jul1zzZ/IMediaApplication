@@ -40,12 +40,14 @@ namespace IMediaApp
                 ClientBtn.Visibility = Visibility.Visible;
                 ReportBtn.Visibility = Visibility.Visible;
                 WorkerBtn.Visibility = Visibility.Visible;
+                PartBtn.Visibility = Visibility.Visible;
             }
             else
             {
                 BuyAdvBtn.Visibility = Visibility.Hidden;
                 ClientBtn.Visibility = Visibility.Hidden;
                 ReportBtn.Visibility = Visibility.Hidden;
+                PartBtn.Visibility = Visibility.Hidden;
                 WorkerBtn.Visibility = Visibility.Hidden;
             }
             if (LoginData.isAuth == true)
@@ -120,16 +122,6 @@ namespace IMediaApp
             MainFrame.Navigate(new Pages.ClientPage());
         }
 
-        private void PartnerBtn_Click_1(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void PartnersBtn_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void ReportBtn_Click(object sender, RoutedEventArgs e)
         {
             MainFrame.Navigate(new Pages.ReportPage());
@@ -138,6 +130,11 @@ namespace IMediaApp
         private void WorkerBtn_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void PartBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new Pages.PartnerListPage());
         }
     }
 }

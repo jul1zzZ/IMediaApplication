@@ -226,6 +226,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\WorkerPAge.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Pages\AddAddressPage.xaml.cs">
@@ -272,6 +276,9 @@
     </Compile>
     <Compile Include="Pages\TeamPage.xaml.cs">
       <DependentUpon>TeamPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\WorkerPAge.xaml.cs">
+      <DependentUpon>WorkerPAge.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -345,6 +352,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resources\elit.jpg" />
     <Resource Include="Resources\logoim.ico" />
   </ItemGroup>
   <ItemGroup>

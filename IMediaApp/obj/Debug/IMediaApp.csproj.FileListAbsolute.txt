@@ -65,3 +65,5 @@ C:\Users\jusep\OneDrive\Рабочий стол\IMediaApp\IMediaApp\obj\Debug\Pa
 C:\Users\jusep\OneDrive\Рабочий стол\IMediaApp\IMediaApp\obj\Debug\Pages\PartnerListPage.g.cs
 C:\Users\jusep\OneDrive\Рабочий стол\IMediaApp\IMediaApp\obj\Debug\Pages\PartnerAddPage.baml
 C:\Users\jusep\OneDrive\Рабочий стол\IMediaApp\IMediaApp\obj\Debug\Pages\PartnerListPage.baml
+C:\Users\jusep\OneDrive\Рабочий стол\IMediaApp\IMediaApp\obj\Debug\Pages\WorkerPAge.g.cs
+C:\Users\jusep\OneDrive\Рабочий стол\IMediaApp\IMediaApp\obj\Debug\Pages\WorkerPAge.baml

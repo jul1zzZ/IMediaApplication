@@ -65,15 +65,6 @@ namespace IMediaApp
             MainFrame.Navigate(new AboutUsPage());
         }
 
-        private void ServiceBtn_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void CalcBtn_Click(object sender, RoutedEventArgs e)
-        {
-        }
-
         private void TeamBtn_Click(object sender, RoutedEventArgs e)
         {
             MainFrame.Navigate(new Pages.TeamPage());
@@ -129,7 +120,7 @@ namespace IMediaApp
 
         private void WorkerBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            MainFrame.Navigate(new Pages.WorkerPAge());
         }
 
         private void PartBtn_Click(object sender, RoutedEventArgs e)

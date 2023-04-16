@@ -53,7 +53,7 @@
             <TextBlock Text="У ВАС ОСТАЛИСЬ ВОПРОСЫ?" FontWeight="Bold" FontFamily="Century Gothic" Margin="16 16 0 0" Foreground="#3F578C" FontStyle="Italic"/>
             <TextBlock Text="Оставьте свой номер телефона и мы Вам перезвоним" FontWeight="Bold" FontFamily="Century Gothic" Margin="16 8 0 0" Foreground="#3F578C" FontStyle="Italic"/>
             <StackPanel Orientation="Horizontal">
-                <TextBox x:Name="NumberTb" Width="150"  Margin="16 16 0 0" Height="20" FontFamily="Century Gothic" FontStyle="Italic" FontSize="11" Foreground="White"/>
+                <TextBox x:Name="NumberTb" Width="150"  Margin="16 16 0 0" Height="20" FontFamily="Century Gothic" FontStyle="Italic" FontSize="9" Foreground="#3F578C"/>
                 <Button x:Name="CallBtn" Width="150" Height="20" Margin="32 16 0 0" Background="#3F578C" Content="ЖДУ ЗВОНКА" FontFamily="Century Gothic" FontStyle="Italic" Foreground="Gray" FontSize="8" Click="CallBtn_Click"/>
             </StackPanel>
         </StackPanel>

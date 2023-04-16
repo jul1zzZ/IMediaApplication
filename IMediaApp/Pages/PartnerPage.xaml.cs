@@ -26,5 +26,18 @@ namespace IMediaApp.Pages
             InitializeComponent();
             PartnerLV.ItemsSource = ImediaEntities.GetContext().Partners.ToList();
         }
+
+        private void EntBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (NumberTb.Text == null)
+            {
+                MessageBox.Show("Укажите Ваш номер");
+            }
+            else
+            {
+                MessageBox.Show("Спасибо за заявку, Мы перезвоним Вам в течении дня и расскажем как привлечь новых клиентов");
+
+            }
+        }
     }
 }

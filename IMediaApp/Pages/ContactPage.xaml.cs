@@ -27,7 +27,15 @@ namespace IMediaApp.Pages
 
         private void CallBtn_Click(object sender, RoutedEventArgs e)
         {
+            if (NumberTb.Text == null)
+            {
+                MessageBox.Show("Укажите Ваш номер");
+            }
+            else
+            {
+                MessageBox.Show("Спасибо за заявку, Мы перезвоним Вам в течении дня и расскажем как привлечь новых клиентов");
 
+            }
         }
     }
 }

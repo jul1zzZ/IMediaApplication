@@ -24,14 +24,7 @@
             <Button x:Name="AboutUsBtn" FontSize="11" VerticalAlignment="Center" FontFamily="Century Gothic" FontStyle="Italic" Click="AboutUsBtn_Click" Background="Transparent" Foreground="#3F578C" BorderBrush="Transparent" HorizontalAlignment="Center" Width="100" Height="20" Margin="0 16 0 0">
                 О компании
             </Button>
-            <Button x:Name="ServiceBtn" FontSize="11" VerticalAlignment="Center" HorizontalAlignment="Center" FontStyle="Italic" Click="ServiceBtn_Click" FontFamily="Century Gothic" Foreground="#3F578C" Background="Transparent" BorderBrush="Transparent" Width="100" Height="20" Margin="0 16 0 0">
-                Услуги
-            </Button>
-            <Button x:Name="CalcBtn" VerticalAlignment="Center" FontSize="11" HorizontalAlignment="Center" FontStyle="Italic" Click="CalcBtn_Click" FontFamily="Century Gothic" Foreground="#3F578C" Background="Transparent" BorderBrush="Transparent" Width="105" Height="40" Margin="0 16 0 0">
-                <TextBlock>
-                    Калькулятор<LineBreak/> размещения
-                </TextBlock>
-            </Button>
+
             <Button x:Name="TeamBtn" VerticalAlignment="Center" FontSize="11" Background="Transparent" FontStyle="Italic" Click="TeamBtn_Click" FontFamily="Century Gothic" Foreground="#3F578C" BorderBrush="Transparent" HorizontalAlignment="Center" Width="100" Height="20" Margin="0 16 0 0">
                 Команда
             </Button>
